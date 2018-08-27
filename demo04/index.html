@@ -7,6 +7,8 @@
   </head>
   <body>
     <div id="example"></div>
+    <div id="example2"></div>
+    <div id="example3"></div>
     <script type="text/babel">
       var HelloMessage = React.createClass({
         render: function() {
@@ -17,6 +19,29 @@
       ReactDOM.render(
         <HelloMessage name="John" />,
         document.getElementById('example')
+      );
+
+
+      // var TestMsg = React.createClass({
+      //     TestRender: function() { //Error: createClass(...): Class specification must implement a `render` method.
+      //         return <p>Hi {this.props.testMsg}</p>;
+      //     }
+      // });
+      // ReactDOM.TestRender(
+      //     <TestMsg testMsg="fullName" />,
+      //     document.getElementById('example2')
+      // );
+
+
+
+      var FullName = React.createClass({
+          render: function() {
+              return <p>Hi {this.props.fullName}</p>;
+          }
+      });
+      ReactDOM.render(
+          <FullName fullName="fullName" />,
+          document.getElementById('example3')
       );
     </script>
   </body>
