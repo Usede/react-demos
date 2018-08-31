@@ -10,7 +10,11 @@
 <script type="text/babel">
     var LikeButton = React.createClass({
         getInitialState: function () {
-            return {liked: false};
+            return {
+                liked: false,
+                //
+                testState: 'test11111'
+            };
         },
         handleClick: function (event) {
             this.setState({liked: !this.state.liked});
@@ -20,6 +24,8 @@
             return (
                 <p onClick={this.handleClick}>
                     You {text} this. Click to toggle.
+                    <br/>
+                    自己定义的测试属性 testState : {this.state.testState}
                 </p>
             );
         }
