@@ -26,6 +26,11 @@
         <MyTitle title={data} />,
         document.getElementById('example')
       );
+      // propTypes 加了isRequired 如果参数未传递 isreact.js:19287 Warning: Failed propType: Required prop `title` was not specified in `MyTitle`.
+      // ReactDOM.render(
+      //     <MyTitle />,
+      //     document.getElementById('example')
+      // );
 
     </script>
   </body>
