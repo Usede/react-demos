@@ -13,7 +13,7 @@
           return (
             <ol>
               {
-                React.Children.map(this.props.children, function (child) {
+                React.Children.map(this.props.children, function (child) { // 讲NotesList下的子标签包裹在ol的li中
                   return <li>{child}</li>;
                 })
               }
@@ -26,6 +26,7 @@
         <NotesList>
           <span>hello</span>
           <span>world</span>
+          <p>这是p标签</p>
         </NotesList>,
         document.getElementById('example')
       );
